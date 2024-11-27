@@ -1,4 +1,5 @@
-# need to do as a command  line 
+import sys
+# need to do as a command  line then do
 # user inputs the amount thy want to convert
 #the user choose the convert from and to
 # have the user pick the type either length: millimeter, centimeter, meter, kilometer, inch, foot, yard, mile.
@@ -16,12 +17,13 @@ print("You picked ", userConvert)
 print("Please input the amount you want to convert")
 
 userAmountTemp = input()
-print("You want to convert ", userAmountTemp)
-c = 12
-amount = c * 1.8
-convertCToF = amount + 32
-print("Converted Celsius to ",c,"Fahrenheit:",round(convertCToF,2))
-
+if(int(userConvert) == 1):
+    print("You want to convert ", userAmountTemp)
+    c = int(userAmountTemp)
+    amount = c * 1.8
+    convertCToF = amount + 32
+    print("Converted Celsius to ",c,"Fahrenheit:",round(convertCToF,2))
+    sys.exit("stop program")
 #convert f to c
 
 f = 60
