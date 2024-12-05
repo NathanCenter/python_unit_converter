@@ -53,3 +53,4 @@ if(int(userConvert) == 4):
     c = int(userAmountTemp)
     finalCelsiusToKelvin = c + 273.15
     print("Celsius to Kelvin:", round(finalCelsiusToKelvin,2))
+    sys.exit("stop program")
