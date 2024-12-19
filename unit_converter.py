@@ -5,14 +5,32 @@ from enum import Enum
 #the user choose the convert from and to
 # have the user pick the type either length: millimeter, centimeter, meter, kilometer, inch, foot, yard, mile.
 # weight:milligram, gram, kilogram, ounce, pound , temperature:  Celsius, Fahrenheit, Kelvin
-# lets do temperature first
+# lets now do weight
+# get the math
+# math for millimeter to centimeter
+# m * 0.1
+millimeter = 15
+millimetertoCentimeter = millimeter * 0.1
+print(millimetertoCentimeter)
 
+#math for centimeter to millimeter
+centimeter = 1
+centimetertoMillimeter= millimeter * 10
+print(centimetertoMillimeter)
+
+# math for feet to meters
+feet = 20
+feetToMeters = feet * 0.3048
+print(feetToMeters)
+
+# math for meters to feet
+
+meters = 50
+metersToFeet = meters * 3.28084
+print(metersToFeet)
 # convert c to f
 
-# now how do we get the user to pick what they want to convert and how much they want to convert it too.
-# lets use user input
-# have it so that the user wants to convert Celsius to Fahrenheit
-# CREATE pairs this may not work the way I want it to go
+
 class userPick(Enum):
     Celsius_to_Fahrenheit = 1
     Fahrenheit_to_Celsius = 2
