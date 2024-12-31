@@ -15,7 +15,6 @@ feetToMeters = feet * 0.3048
 print(feetToMeters)
 
 # math for meters to feet
-
 meters = 50
 metersToFeet = meters * 3.28084
 print(metersToFeet)
@@ -23,4 +22,7 @@ print(metersToFeet)
 feet = 12
 feetToCentimeter = feet * 30.48
 print(feetToCentimeter)
-# convert c to f
+# math for centimeter  to feet
+cm = 33
+centimeterToFeet = cm / 30.48
+print("cm to feet ", centimeterToFeet)
