@@ -26,3 +26,18 @@ print(feetToCentimeter)
 cm = 33
 centimeterToFeet = cm / 30.48
 print("cm to feet ", centimeterToFeet)
+
+#math for yards to feet
+yards = 5
+yardsToFeet = yards * 3
+print("yards to feet ",yardsToFeet)
+
+#math for feet to yards
+feet = 5
+feetToYards = feet/3
+print("feet to yards ",feetToYards)
+
+#math for yards to miles
+yards = 1000
+yardsToMiles = yards / 1760
+print("yards to miles ",yardsToMiles)
