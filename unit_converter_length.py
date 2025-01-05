@@ -41,3 +41,8 @@ print("feet to yards ",feetToYards)
 yards = 1000
 yardsToMiles = yards / 1760
 print("yards to miles ",yardsToMiles)
+
+#math for miles to yards
+miles = 1000
+milesToYards = miles * 1760
+print("miles to yards",milesToYards)
