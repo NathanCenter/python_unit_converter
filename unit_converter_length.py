@@ -1,3 +1,9 @@
+import sys
+from enum import Enum
+
+print("Please chose what temperature would you like to convert to. \n 1.millimeter to centimeter \n 2.millimeter to centimeter \n 3.feet to meters \n 4.meters to feet\n 5.feet to centimeter\n 6.centimeter to feet\n 7.yards to miles\n 8.miles to yards")
+
+
 # math for millimeter to centimeter
 # m * 0.1
 millimeter = 15
