@@ -30,17 +30,26 @@ if(userInput == 3):
     sys.exit("stop program")
 
 # math for meters to feet
-meters = 50
-metersToFeet = meters * 3.28084
-print(metersToFeet)
+if(userInput == 4):
+    print("please input the amount of you wish to input")
+    userMeters = int(input())
+    metersToFeet = userMeters * 3.28084
+    print("Feet",round(metersToFeet,2))
+    sys.exit("stop program")
 # math for feet  to centimeter
-feet = 12
-feetToCentimeter = feet * 30.48
-print(feetToCentimeter)
-# math for centimeter  to feet
-cm = 33
-centimeterToFeet = cm / 30.48
-print("cm to feet ", centimeterToFeet)
+if(userInput == 5):
+    print("please input the amount of you wish to input")
+    userFeet = int(input())
+    feetToCentimeter = userFeet * 30.48
+    print("Centimeter",round(feetToCentimeter,2))
+    sys.exit("stop program")
+# math for centimeter to feet
+if(userInput == 6):
+    print("please input the amount of you wish to input")
+    userCentimeter = int(input())
+    centimeterToFeet = userCentimeter / 30.48
+    print("Feet",round(centimeterToFeet,2))
+    sys.exit("stop program")
 
 #math for yards to feet
 yards = 5
