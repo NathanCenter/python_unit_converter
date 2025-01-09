@@ -1,24 +1,33 @@
 import sys
 from enum import Enum
 
-print("Please chose what temperature would you like to convert to. \n 1.millimeter to centimeter \n 2.millimeter to centimeter \n 3.feet to meters \n 4.meters to feet\n 5.feet to centimeter\n 6.centimeter to feet\n 7.yards to miles\n 8.miles to yards")
-
-
+print("Please chose what length  would you like to convert to. \n 1.millimeter to centimeter \n 2.centimeter to millimeter \n 3.feet to meters \n 4.meters to feet\n 5.feet to centimeter\n 6.centimeter to feet\n 7.yards to miles\n 8.miles to yards")
+userInput = int(input())
+print("user input", userInput)
 # math for millimeter to centimeter
 # m * 0.1
-millimeter = 15
-millimetertoCentimeter = millimeter * 0.1
-print(millimetertoCentimeter)
+if (userInput == 1):
+    print("please input the amount of you wish to input")
+    userMillimeter = int(input())
+    millimetertoCentimeter = userMillimeter * 0.1
+    print("Centimeter:",round(millimetertoCentimeter,2))
+    sys.exit("stop program")
 
 #math for centimeter to millimeter
-centimeter = 1
-centimetertoMillimeter= millimeter * 10
-print(centimetertoMillimeter)
+if (userInput == 2):
+    print("please input the amount of you wish to input")
+    userMillimeter = int(input())
+    centimetertoMillimeter= userMillimeter * 10
+    print("millimeter",round(centimetertoMillimeter,2))
+    sys.exit("stop program")
 
 # math for feet to meters
-feet = 20
-feetToMeters = feet * 0.3048
-print(feetToMeters)
+if(userInput == 3):
+    print("please input the amount of you wish to input")
+    userFeet = int(input())
+    feetToMeters = userFeet * 0.3048
+    print("Meters",round(feetToMeters,2))
+    sys.exit("stop program")
 
 # math for meters to feet
 meters = 50
