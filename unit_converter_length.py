@@ -1,7 +1,7 @@
 import sys
 from enum import Enum
 
-print("Please chose what length  would you like to convert to. \n 1.millimeter to centimeter \n 2.centimeter to millimeter \n 3.feet to meters \n 4.meters to feet\n 5.feet to centimeter\n 6.centimeter to feet\n 7.yards to miles\n 8.miles to yards")
+print("Please chose what length  would you like to convert to. \n 1.millimeter to centimeter \n 2.centimeter to millimeter \n 3.feet to meters \n 4.meters to feet\n 5.feet to centimeter\n 6.centimeter to feet\n 7.yards to feet \n 8.feet to yards \n 9.yards to miles\n 10.miles to yards")
 userInput = int(input())
 print("user input", userInput)
 # math for millimeter to centimeter
@@ -52,21 +52,32 @@ if(userInput == 6):
     sys.exit("stop program")
 
 #math for yards to feet
-yards = 5
-yardsToFeet = yards * 3
-print("yards to feet ",yardsToFeet)
-
+if(userInput == 7):
+    print("please input the amount of you wish to input")
+    userYards = int(input())
+    yardsToFeet = userYards * 3
+    print("yards to feet ",yardsToFeet,"feet")
+    sys.exit("stop program")
 #math for feet to yards
-feet = 5
-feetToYards = feet/3
-print("feet to yards ",feetToYards)
+if(userInput == 8):
+    print("please input the amount of you wish to input")
+    userFeet = int(input())
+    feetToYards = userFeet/3
+    print("feet to yards ",round(feetToYards,2))
+    sys.exit("stop program")
 
 #math for yards to miles
-yards = 1000
-yardsToMiles = yards / 1760
-print("yards to miles ",yardsToMiles)
+if(userInput == 9):
+    print("please input the amount of you wish to input")
+    userYards = int(input())
+    yardsToMiles = userYards / 1760
+    print("yards to miles ",round(yardsToMiles,2))
+    sys.exit("stop program")
 
 #math for miles to yards
-miles = 1000
-milesToYards = miles * 1760
-print("miles to yards",milesToYards)
+if(userInput == 10):
+    print("please input the amount of you wish to input")
+    userMiles = int(input())
+    milesToYards = userMiles * 1760
+    print("miles to yards",round(milesToYards,2))
+    sys.exit("stop program")
