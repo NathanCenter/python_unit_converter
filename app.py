@@ -10,6 +10,9 @@ def page2():
 @app.route('/page3')
 def page3():
     return render_template("page3.html")
+@app.route('/page4')
+def page4():
+    return render_template("page4.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
