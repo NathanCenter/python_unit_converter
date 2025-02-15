@@ -1,12 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template("index.html")
-@app.route('/page2')
+@app.route('/page2', methods=['GET','POST'])
 def page2():
+    value1 = float(request.form['value1'])
+    print(value1)
     return render_template("page2.html")
+
 @app.route('/page3')
 def page3():
     return render_template("page3.html")
