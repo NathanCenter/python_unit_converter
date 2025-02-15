@@ -6,8 +6,9 @@ def index():
     return render_template("index.html")
 @app.route('/page2', methods=['GET','POST'])
 def page2():
-    value1 = float(request.form['value1'])
-    print(value1)
+    #value1 = float(request.form['value1'])
+    if request.method == 'POST':
+        print(float(request.form['value1']))
     return render_template("page2.html")
 
 @app.route('/page3')
