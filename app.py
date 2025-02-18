@@ -9,8 +9,13 @@ def page2():
     #value1 = float(request.form['value1'])
     if request.method == 'POST':
         select_option = request.form.get('weight')
+        userValue = float(request.form['value1'])
         print("the type wants the user to pick",select_option)
         print(request.form['value1'],"this is the amount the user inputed")
+
+        if "milligramtoGram" == select_option:
+            totalUserValue = userValue * 0.001
+            print(totalUserValue) 
         
     return render_template("page2.html")
 
