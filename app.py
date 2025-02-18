@@ -8,7 +8,10 @@ def index():
 def page2():
     #value1 = float(request.form['value1'])
     if request.method == 'POST':
-        print(float(request.form['value1']))
+        select_option = request.form.get('weight')
+        print("the type wants the user to pick",select_option)
+        print(request.form['value1'],"this is the amount the user inputed")
+        
     return render_template("page2.html")
 
 @app.route('/page3')
