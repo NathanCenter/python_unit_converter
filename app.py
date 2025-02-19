@@ -7,7 +7,9 @@ def index():
 @app.route('/page2', methods=['GET','POST'])
 def page2():
     #value1 = float(request.form['value1'])
+    
     if request.method == 'POST':
+        global htmlDisplay
         select_option = request.form.get('weight')
         userValue = float(request.form['value1'])
         print("the type wants the user to pick",select_option)
@@ -15,9 +17,13 @@ def page2():
 
         if "milligramtoGram" == select_option:
             totalUserValue = userValue * 0.001
-            print(totalUserValue) 
+            htmlDisplay = totalUserValue
+
+        if "gramtoMilligram" == select_option:
+            totalUserValue = userValue * 1000
+            htmlDisplay = totalUserValue
         
-    return render_template("page2.html")
+    return render_template("page2.html",display = str(htmlDisplay) )
 
 @app.route('/page3')
 def page3():
