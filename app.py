@@ -22,6 +22,10 @@ def page2():
         if "gramtoMilligram" == select_option:
             totalUserValue = userValue * 1000
             htmlDisplay = totalUserValue
+        if "kilogramtoOunce" == select_option:
+            totalUserValue = userValue * 35.274
+            htmlDisplay = totalUserValue
+        
    # can't seem to render out the amount
     return render_template("page2.html", display = str(htmlDisplay))
 
