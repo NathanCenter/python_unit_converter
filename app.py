@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request
 app = Flask(__name__)
+global display
 
 @app.route('/')
 def index():
@@ -7,9 +8,8 @@ def index():
 @app.route('/page2', methods=['GET','POST'])
 def page2():
     #value1 = float(request.form['value1'])
-    
+    htmlDisplay = ""
     if request.method == 'POST':
-        global htmlDisplay
         select_option = request.form.get('weight')
         userValue = float(request.form['value1'])
         print("the type wants the user to pick",select_option)
@@ -22,8 +22,8 @@ def page2():
         if "gramtoMilligram" == select_option:
             totalUserValue = userValue * 1000
             htmlDisplay = totalUserValue
-        
-    return render_template("page2.html",display = str(htmlDisplay) )
+   # can't seem to render out the amount
+    return render_template("page2.html", display = str(htmlDisplay))
 
 @app.route('/page3')
 def page3():
