@@ -11,13 +11,11 @@ def page2():
     htmlDisplay = ""
     if request.method == 'POST':
         select_option = request.form.get('weight')
-        #userValue = '0'
         userValue = request.form['value1']
         print("the type wants the user to pick",select_option)
         print(request.form['value1'],"this is the amount the user input")
-        # had to convert blank
+        # convert userValue to fix flask ValueError 
         to_convert = userValue.replace('','0')
-        print(to_convert)
         
         if "milligramtoGram" == select_option:
             totalUserValue = float(to_convert) * 0.001
@@ -33,7 +31,6 @@ def page2():
             htmlDisplay = totalUserValue
         if  to_convert  == '0' :
             htmlDisplay = "please input a number"
-   # need to check if the user has a blank amount
     return render_template("page2.html", display = str(htmlDisplay))
 
 @app.route('/page3')
