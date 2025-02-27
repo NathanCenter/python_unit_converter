@@ -11,22 +11,29 @@ def page2():
     htmlDisplay = ""
     if request.method == 'POST':
         select_option = request.form.get('weight')
-        userValue = float(request.form['value1'])
+        #userValue = '0'
+        userValue = request.form['value1']
         print("the type wants the user to pick",select_option)
-        print(request.form['value1'],"this is the amount the user inputed")
-
+        print(request.form['value1'],"this is the amount the user input")
+        # had to convert blank
+        to_convert = userValue.replace('','0')
+        print(to_convert)
+        
         if "milligramtoGram" == select_option:
-            totalUserValue = userValue * 0.001
+            totalUserValue = float(to_convert) * 0.001
             htmlDisplay = totalUserValue
-
         if "gramtoMilligram" == select_option:
-            totalUserValue = userValue * 1000
+            totalUserValue = float(to_convert) * 1000
             htmlDisplay = totalUserValue
         if "kilogramtoOunce" == select_option:
-            totalUserValue = userValue * 35.274
+            totalUserValue = float(to_convert) * 35.274
             htmlDisplay = totalUserValue
-        
-   # can't seem to render out the amount
+        if "ouncetoKilogram" == select_option:
+            totalUserValue = float(to_convert) * 0.0283495231
+            htmlDisplay = totalUserValue
+        if  to_convert  == '0' :
+            htmlDisplay = "please input a number"
+   # need to check if the user has a blank amount
     return render_template("page2.html", display = str(htmlDisplay))
 
 @app.route('/page3')
