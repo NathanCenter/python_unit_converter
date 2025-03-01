@@ -29,6 +29,13 @@ def page2():
         if "ouncetoKilogram" == select_option:
             totalUserValue = float(to_convert) * 0.0283495231
             htmlDisplay = totalUserValue
+        # math of pounds to Grams
+        if "poundstoGrams" == select_option:
+            totalUserValue = float(to_convert) * 453.59237
+            htmlDisplay = totalUserValue
+        if "gramstoPounds" == select_option:
+            totalUserValue = float(to_convert) / 453.59290944
+            htmlDisplay = round(totalUserValue,5)
         if  to_convert  == '0' :
             htmlDisplay = "please input a number"
     return render_template("page2.html", display = str(htmlDisplay))
