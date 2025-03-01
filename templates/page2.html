@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>this is page two</title>
-    <h2> woot woot!</h2>
-    <p> woot woot@</p>
+    <title>Weight conversion</title>
+    <h2> Weight conversion</h2>
+    <form method="POST">
+        <select name="weight">
+            <option value = "milligramtoGram" name="milligramtoGram">milligram to gram </option>
+            <option value = "gramtoMilligram" name="gramtoMilligram">gram to milligram </option>
+            <option value = "kilogramtoOunce" name="kilogramtoOunce">kilogram to ounce </option>
+            <option value = "ouncetoKilogram" name="ouncetoKilogram">ounce to kilogram </option>
+            <option value = "poundstoGrams" name="poundstoGrams">pounds to grams </option>
+            <option value = "gramstoPounds" name="gramstoPounds">grams to pounds </option>
+        
+        <input name="value1" type="text">
+        <p>amount converted: {{display}} </p>
+        <input type="submit">
+        </select>
+    </form>
 </head>
 <body>
     
