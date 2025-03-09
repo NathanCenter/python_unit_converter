@@ -15,29 +15,39 @@ def page2():
         print("the type wants the user to pick",select_option)
         print(request.form['value1'],"this is the amount the user input")
         # convert userValue to fix flask ValueError 
-        to_convert = userValue.replace('','0')
-        
-        if "milligramtoGram" == select_option:
-            totalUserValue = float(to_convert) * 0.001
-            htmlDisplay = totalUserValue
-        if "gramtoMilligram" == select_option:
-            totalUserValue = float(to_convert) * 1000
-            htmlDisplay = totalUserValue
-        if "kilogramtoOunce" == select_option:
-            totalUserValue = float(to_convert) * 35.274
-            htmlDisplay = totalUserValue
-        if "ouncetoKilogram" == select_option:
-            totalUserValue = float(to_convert) * 0.0283495231
-            htmlDisplay = totalUserValue
-        # math of pounds to Grams
-        if "poundstoGrams" == select_option:
-            totalUserValue = float(to_convert) * 453.59237
-            htmlDisplay = totalUserValue
-        if "gramstoPounds" == select_option:
-            totalUserValue = float(to_convert) / 453.59290944
-            htmlDisplay = round(totalUserValue,5)
-        if  to_convert  == '0' :
+       
+        print(type(userValue))
+        if userValue.isdigit():
+            if "milligramtoGram" == select_option:
+                totalUserValue = float(userValue) * 0.001
+                htmlDisplay = totalUserValue
+            if "gramtoMilligram" == select_option:
+                totalUserValue = float(userValue) * 1000
+                htmlDisplay = totalUserValue
+                #need to show fix this bug :C
+            if "kilogramtoOunce" == select_option:
+                totalUserValue = float(userValue) * 35.274
+                #numbers=int(userValue) * 35.274
+                print(type(userValue))
+                htmlDisplay = totalUserValue
+            if "ouncetoKilogram" == select_option:
+                totalUserValue = float(userValue) * 0.0283495231
+                htmlDisplay = totalUserValue
+            if "poundstoGrams" == select_option:
+                totalUserValue = float(userValue) * 453.59237
+                htmlDisplay = totalUserValue
+            if "poundstoGrams" == select_option:
+                totalUserValue = float(userValue) * 453.59237
+                htmlDisplay = totalUserValue
+            if "gramstoPounds" == select_option:
+                totalUserValue = float(userValue) / 453.59290944
+                htmlDisplay = round(totalUserValue,5)
+        else:
+           htmlDisplay = "This is not a number please input a number"
+               # print(type(to_convert)    
+        if  userValue  == '' :
             htmlDisplay = "please input a number"
+        
     return render_template("page2.html", display = str(htmlDisplay))
 
 @app.route('/page3')
