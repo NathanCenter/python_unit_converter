@@ -44,15 +44,33 @@ def page2():
                 htmlDisplay = round(totalUserValue,5)
         else:
            htmlDisplay = "This is not a number please input a number"
-               # print(type(to_convert)    
         if  userValue  == '' :
             htmlDisplay = "please input a number"
         
     return render_template("page2.html", display = str(htmlDisplay))
 
-@app.route('/page3')
+@app.route('/page3', methods=['GET','POST'])
 def page3():
-    return render_template("page3.html")
+    htmlDisplay = ""
+    
+    if request.method == 'POST':
+        userValue = request.form['value2']
+        select_option = request.form.get('length')
+        print(type(userValue))
+        if userValue.isdigit():
+            if select_option == "millimetertoCentimeter":
+                 htmlDisplay = float(userValue)
+                 print("test")
+    else:
+        htmlDisplay = "This is not a number please input a number"
+    if  userValue  == '' :
+        htmlDisplay = "please input a number"
+    
+        
+    return render_template("page3.html",display = str(htmlDisplay))
+
+
+
 @app.route('/page4')
 def page4():
     return render_template("page4.html")

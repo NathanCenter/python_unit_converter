@@ -6,9 +6,17 @@
     <title>Length conversion</title>
     <h2> Length conversion</h2>
     <form method="POST">
+        <p>please input the amount and type you want converted by length</p>
+        <select name="length"> 
+            <option value = "millimetertoCentimeter" name="millimetertoCentimeter">millimeter to centimeter </option>
+            <option value = "centimetertoMillimeter" name="centimetertoMillimeter">centimeter to millimeter </option>
+        </select>
+        <input name="value2" type="text">
+       
+        <p>amount converted: {{display}} </p>
         
+        <input type="submit">
     </form>
-    <p></p>
 </head>
 <body>
     
