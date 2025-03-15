@@ -52,15 +52,30 @@ def page2():
 @app.route('/page3', methods=['GET','POST'])
 def page3():
     htmlDisplay = ""
-    
+    userValue = ""
     if request.method == 'POST':
         userValue = request.form['value2']
         select_option = request.form.get('length')
         print(type(userValue))
         if userValue.isdigit():
             if select_option == "millimetertoCentimeter":
-                 htmlDisplay = float(userValue)
-                 print("test")
+                 totalUserValue = float(userValue) * 0.1
+                 htmlDisplay = totalUserValue
+            if select_option == "centimetertoMillimeter":
+                 totalUserValue = float(userValue)  * 10
+                 htmlDisplay = totalUserValue
+            if select_option == "feettoMeters":
+                 totalUserValue = float(userValue)  * 0.3048
+                 htmlDisplay = round(totalUserValue,5)
+            if select_option == "meterstoFeet":
+                 totalUserValue = float(userValue)  * 3.28084
+                 htmlDisplay = round(totalUserValue,3)
+            if select_option == "feettoCentimeter":
+                 totalUserValue = float(userValue)  * 30.48
+                 htmlDisplay = round(totalUserValue,2)
+            if select_option == "centimetertoFeet":
+                 totalUserValue = float(userValue) / 30.48
+                 htmlDisplay = round(totalUserValue,2)
     else:
         htmlDisplay = "This is not a number please input a number"
     if  userValue  == '' :
