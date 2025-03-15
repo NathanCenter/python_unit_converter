@@ -76,6 +76,18 @@ def page3():
             if select_option == "centimetertoFeet":
                  totalUserValue = float(userValue) / 30.48
                  htmlDisplay = round(totalUserValue,2)
+            if select_option == "yardstoFeet":
+                 totalUserValue = float(userValue) * 3
+                 htmlDisplay = round(totalUserValue,2)
+            if select_option == "feettoYards":
+                 totalUserValue = float(userValue) /3
+                 htmlDisplay = round(totalUserValue,2)
+            if select_option == "yardstoMiles":
+                 totalUserValue = float(userValue) / 1760
+                 htmlDisplay = round(totalUserValue,2)
+            if select_option == "milestoYards":
+                 totalUserValue = float(userValue) * 1760
+                 htmlDisplay = round(totalUserValue,2)
     else:
         htmlDisplay = "This is not a number please input a number"
     if  userValue  == '' :
