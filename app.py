@@ -9,6 +9,7 @@ def index():
 def page2():
     #value1 = float(request.form['value1'])
     htmlDisplay = ""
+    userValue = ""
     if request.method == 'POST':
         select_option = request.form.get('weight')
         userValue = request.form['value1']
@@ -88,8 +89,8 @@ def page3():
             if select_option == "milestoYards":
                  totalUserValue = float(userValue) * 1760
                  htmlDisplay = round(totalUserValue,2)
-    else:
-        htmlDisplay = "This is not a number please input a number"
+        else:
+            htmlDisplay = "This is not a number please input a number"
     if  userValue  == '' :
         htmlDisplay = "please input a number"
     
