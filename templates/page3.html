@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Length conversion</title>
     <h2> Length conversion</h2>
-    <p></p>
+    <form method="POST">
+        <p>please input the amount and type you want converted by length</p>
+        <select name="length"> 
+            <option value = "millimetertoCentimeter" name="millimetertoCentimeter">millimeter to centimeter </option>
+            <option value = "centimetertoMillimeter" name="centimetertoMillimeter">centimeter to millimeter </option>
+            <option value = "feettoMeters" name="feettoMeters">feet to meters </option>
+            <option value = "meterstoFeet" name="meterstoFeet">meters to feet </option>
+            <option value = "feettoCentimeter" name="feettoCentimeter">feet to centimeter </option>
+            <option value = "centimetertoFeet" name="centimetertoFeet">centimeter to feet </option>
+            <option value = "yardstoFeet" name="yardstoFeet">yards to feet </option>
+            <option value = "feettoYards" name="feettoYards">feet to yards </option>
+            <option value = "yardstoMiles" name="yardstoMiles">yards to miles </option>
+            <option value = "milestoYards" name="milestoYards">miles to yards </option>
+        </select>
+        <input name="value2" type="text">
+       
+        <p>amount converted: {{display}} </p>
+        
+        <input type="submit">
+    </form>
 </head>
 <body>
     
