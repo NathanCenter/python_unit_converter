@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature conversion</title>
     <h2> Temperature conversion</h2>
-    <p>please input the amount and type you want converted by length</p>
+    <p>please input the amount and type you want converted by temperature</p>
+    <form method="POST">
+        <select name="temp"> 
+            <option value = "celsiustoFahrenheit" name="celsiustoFahrenheit">Celsius to Fahrenheit </option>
+        </select>
+        <input name="value3" type="text">
+       
+        <p>amount converted: {{display}} </p>
+        <input type="submit">
+    </form>
 </head>
 <body>
     

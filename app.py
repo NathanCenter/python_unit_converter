@@ -101,6 +101,10 @@ def page3():
 
 @app.route('/page4')
 def page4():
+    htmlDisplay = ""
+    userValue = ""
+    if request.method == 'POST':
+        pass
     return render_template("page4.html")
 
 if __name__ == "__main__":
