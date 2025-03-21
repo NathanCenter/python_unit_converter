@@ -99,13 +99,33 @@ def page3():
 
 
 
-@app.route('/page4')
+@app.route('/page4',methods=['GET','POST'])
 def page4():
     htmlDisplay = ""
     userValue = ""
     if request.method == 'POST':
-        pass
-    return render_template("page4.html")
+        userValue = request.form['value3']
+        select_option = request.form.get('temp')
+        if userValue.isdigit():
+            if select_option == "celsiustoFahrenheit":
+                ctof =float(userValue) * 1.8
+                totalUserValue = ctof + 32
+                htmlDisplay = totalUserValue
+            if select_option == "fahrenheittoCelsius":
+                ftoc = float(userValue) - 32
+                totalUserValue = ftoc / 1.8
+                htmlDisplay = totalUserValue
+            if select_option == "fahrenheittoKelvin":
+                ftoksubtract = float(userValue) - 32
+                ftokmult = ftoksubtract * 5
+                fotkdivid = ftokmult / 9 
+                totalUserValue = fotkdivid + 273.15
+                htmlDisplay = totalUserValue
+        else:
+            htmlDisplay = "This is not a number please input a number"
+    if userValue  == '' :
+        htmlDisplay = "please input a number" 
+    return render_template("page4.html",display = str(htmlDisplay))
 
 if __name__ == "__main__":
     app.run(debug=True)
