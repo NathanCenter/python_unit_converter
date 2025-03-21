@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature conversion</title>
     <h2> Temperature conversion</h2>
-    <p></p>
+    <p>please input the amount and type you want converted by temperature</p>
+    <form method="POST">
+        <select name="temp"> 
+            <option value = "celsiustoFahrenheit" name="celsiustoFahrenheit">Celsius to Fahrenheit </option>
+            <option value = "fahrenheittoCelsius" name="fahrenheittoCelsius">Fahrenheit to Celsius </option>
+            <option value = "fahrenheittoKelvin" name="fahrenheittoKelvin">Fahrenheit to Kelvin </option>
+            <option value = "kelvinttoFahrenheit" name="kelvinttoFahrenheit">Kelvin to Fahrenheit </option>
+            <option value = "celsiustoKelvin" name="celsiustoKelvin">Celsius to Kelvin </option>
+            <option value = "kelvintoCelsius" name="kelvintoCelsius">Kelvin to Celsius </option>
+        </select>
+        <input name="value3" type="text">
+       
+        <p>amount converted: {{display}} </p>
+        <input type="submit">
+    </form>
 </head>
 <body>
     
