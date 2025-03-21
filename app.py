@@ -121,6 +121,17 @@ def page4():
                 fotkdivid = ftokmult / 9 
                 totalUserValue = fotkdivid + 273.15
                 htmlDisplay = totalUserValue
+            if select_option == "kelvinttoFahrenheit":
+                ftoksubtract = float(userValue) -273.15
+                ftokmult = ftoksubtract * 1.8
+                totalUserValue = ftokmult + 32
+                htmlDisplay = totalUserValue
+            if select_option == "celsiustoKelvin":
+                totalUserValue =float(userValue)  + 273.15
+                htmlDisplay = totalUserValue
+            if select_option == "kelvintoCelsius":
+                totalUserValue =float(userValue)  - 273.15
+                htmlDisplay = totalUserValue
         else:
             htmlDisplay = "This is not a number please input a number"
     if userValue  == '' :
